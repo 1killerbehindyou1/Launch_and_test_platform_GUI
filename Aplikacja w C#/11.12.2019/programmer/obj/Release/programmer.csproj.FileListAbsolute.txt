@@ -1,0 +1,5 @@
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\programmer\bin\Release\programmer.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\programmer\bin\Release\programmer.pdb
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\programmer\obj\Release\programmer.csprojAssemblyReference.cache
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\programmer\obj\Release\programmer.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\programmer\obj\Release\programmer.pdb
