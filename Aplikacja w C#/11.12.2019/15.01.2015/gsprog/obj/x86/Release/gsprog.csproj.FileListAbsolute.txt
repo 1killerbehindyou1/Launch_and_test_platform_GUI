@@ -1,0 +1,16 @@
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\bin\Release\gsprog.exe.config
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\bin\Release\gsprog.exe
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\bin\Release\gsprog.pdb
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\bin\Release\programmer.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\bin\Release\programmer.pdb
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\obj\x86\Release\gsprog.Form1.resources
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\obj\x86\Release\gsprog.Properties.Resources.resources
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\obj\x86\Release\gsprog.csproj.GenerateResource.cache
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\obj\x86\Release\gsprog.csproj.CopyComplete
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\obj\x86\Release\gsprog.exe
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\obj\x86\Release\gsprog.pdb
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\bin\Release\MySql.Data.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\bin\Release\MySql.Data.EntityFramework.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\bin\Release\MySql.Web.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\gsprog\bin\Release\Renci.SshNet.dll
