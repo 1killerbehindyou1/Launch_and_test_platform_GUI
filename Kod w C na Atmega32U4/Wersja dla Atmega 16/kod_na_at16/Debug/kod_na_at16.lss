@@ -1,0 +1,555 @@
+
+kod_na_at16.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000002f4  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         000000d4  00800060  000002f4  00000388  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000122  00800134  00800134  0000045c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000045c  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000048c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000d8  00000000  00000000  000004c8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001078  00000000  00000000  000005a0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000008fb  00000000  00000000  00001618  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000794  00000000  00000000  00001f13  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001f0  00000000  00000000  000026a8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000528  00000000  00000000  00002898  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000004c7  00000000  00000000  00002dc0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000a8  00000000  00000000  00003287  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  28:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  2c:	0c 94 9c 00 	jmp	0x138	; 0x138 <__vector_11>
+  30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  34:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d4 e0       	ldi	r29, 0x04	; 4
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	11 e0       	ldi	r17, 0x01	; 1
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	e4 ef       	ldi	r30, 0xF4	; 244
+  68:	f2 e0       	ldi	r31, 0x02	; 2
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	a4 33       	cpi	r26, 0x34	; 52
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+
+00000076 <__do_clear_bss>:
+  76:	22 e0       	ldi	r18, 0x02	; 2
+  78:	a4 e3       	ldi	r26, 0x34	; 52
+  7a:	b1 e0       	ldi	r27, 0x01	; 1
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
+
+00000080 <.do_clear_bss_start>:
+  80:	a6 35       	cpi	r26, 0x56	; 86
+  82:	b2 07       	cpc	r27, r18
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+  86:	0e 94 94 00 	call	0x128	; 0x128 <main>
+  8a:	0c 94 78 01 	jmp	0x2f0	; 0x2f0 <_exit>
+
+0000008e <__bad_interrupt>:
+  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000092 <CPU_init>:
+}
+	*/					
+void UART_raport(char *result)							//utworzenie raportu z poj wyniku pomiaru 
+{														//do wys?ania i wys?anie do bufora
+
+	 Print_to_buf(&buffer_TX, result);					//buforowanie wynikow pomiaru 
+  92:	0e 94 6b 01 	call	0x2d6	; 0x2d6 <init_UART>
+  96:	08 95       	ret
+
+00000098 <init_dev_onPCB>:
+  98:	08 95       	ret
+
+0000009a <ClearRX_buf>:
+
+}
+
+void ClearRX_buf(void)
+{
+	RecievCharCount =0;
+  9a:	10 92 35 01 	sts	0x0135, r1	; 0x800135 <RecievCharCount>
+	flag_val =CLR;
+  9e:	10 92 34 01 	sts	0x0134, r1	; 0x800134 <__data_end>
+	flag_arg =CLR;
+  a2:	10 92 3e 01 	sts	0x013E, r1	; 0x80013e <flag_arg>
+  a6:	e3 e4       	ldi	r30, 0x43	; 67
+  a8:	f1 e0       	ldi	r31, 0x01	; 1
+  aa:	a7 e4       	ldi	r26, 0x47	; 71
+  ac:	b2 e0       	ldi	r27, 0x02	; 2
+  ae:	82 e5       	ldi	r24, 0x52	; 82
+  b0:	91 e0       	ldi	r25, 0x01	; 1
+	
+	for(uint8_t i =0; i<15; i++)
+	{
+		polecenie.arg[i] = '\0';
+  b2:	11 92       	st	Z+, r1
+		RX_buf[i] = '\0';
+  b4:	1d 92       	st	X+, r1
+{
+	RecievCharCount =0;
+	flag_val =CLR;
+	flag_arg =CLR;
+	
+	for(uint8_t i =0; i<15; i++)
+  b6:	e8 17       	cp	r30, r24
+  b8:	f9 07       	cpc	r31, r25
+  ba:	d9 f7       	brne	.-10     	; 0xb2 <ClearRX_buf+0x18>
+	{
+		polecenie.arg[i] = '\0';
+		RX_buf[i] = '\0';
+	}
+	
+	polecenie.value = 0;
+  bc:	10 92 3f 01 	sts	0x013F, r1	; 0x80013f <polecenie>
+  c0:	10 92 40 01 	sts	0x0140, r1	; 0x800140 <polecenie+0x1>
+  c4:	10 92 41 01 	sts	0x0141, r1	; 0x800141 <polecenie+0x2>
+  c8:	10 92 42 01 	sts	0x0142, r1	; 0x800142 <polecenie+0x3>
+  cc:	08 95       	ret
+
+000000ce <UART_Get_command>:
+	 PrintNewLine();*/
+
+
+	uint8_t RX_buff_counter =0;
+	
+	if(flag_arg==SET)
+  ce:	80 91 3e 01 	lds	r24, 0x013E	; 0x80013e <flag_arg>
+  d2:	81 30       	cpi	r24, 0x01	; 1
+  d4:	e1 f4       	brne	.+56     	; 0x10e <UART_Get_command+0x40>
+	{
+		
+	for( RX_buff_counter =0;RX_buff_counter < RecievCharCount-2 ;RX_buff_counter++)
+  d6:	40 91 35 01 	lds	r20, 0x0135	; 0x800135 <RecievCharCount>
+  da:	50 e0       	ldi	r21, 0x00	; 0
+  dc:	42 50       	subi	r20, 0x02	; 2
+  de:	51 09       	sbc	r21, r1
+  e0:	14 16       	cp	r1, r20
+  e2:	15 06       	cpc	r1, r21
+  e4:	94 f4       	brge	.+36     	; 0x10a <UART_Get_command+0x3c>
+  e6:	80 e0       	ldi	r24, 0x00	; 0
+  e8:	90 e0       	ldi	r25, 0x00	; 0
+  ea:	20 e0       	ldi	r18, 0x00	; 0
+		{	
+			polecenie.arg[RX_buff_counter] = RX_buf[RX_buff_counter+1];			//przypisanie wartsci do zmiennych arg
+  ec:	fc 01       	movw	r30, r24
+  ee:	e1 5c       	subi	r30, 0xC1	; 193
+  f0:	fe 4f       	sbci	r31, 0xFE	; 254
+  f2:	dc 01       	movw	r26, r24
+  f4:	a9 5b       	subi	r26, 0xB9	; 185
+  f6:	bd 4f       	sbci	r27, 0xFD	; 253
+  f8:	11 96       	adiw	r26, 0x01	; 1
+  fa:	8c 91       	ld	r24, X
+  fc:	84 83       	std	Z+4, r24	; 0x04
+	uint8_t RX_buff_counter =0;
+	
+	if(flag_arg==SET)
+	{
+		
+	for( RX_buff_counter =0;RX_buff_counter < RecievCharCount-2 ;RX_buff_counter++)
+  fe:	2f 5f       	subi	r18, 0xFF	; 255
+ 100:	82 2f       	mov	r24, r18
+ 102:	90 e0       	ldi	r25, 0x00	; 0
+ 104:	84 17       	cp	r24, r20
+ 106:	95 07       	cpc	r25, r21
+ 108:	8c f3       	brlt	.-30     	; 0xec <UART_Get_command+0x1e>
+		{	
+			polecenie.arg[RX_buff_counter] = RX_buf[RX_buff_counter+1];			//przypisanie wartsci do zmiennych arg
+			//polecenie.arg[RX_buff_counter+1 ] = END_OF_TAB;
+		}
+		//polecenie.value= 0.00;
+		flag_arg= CLR;
+ 10a:	10 92 3e 01 	sts	0x013E, r1	; 0x80013e <flag_arg>
+		
+		
+		
+	}*/
+	
+	rsPrint("argument:\t");
+ 10e:	80 e6       	ldi	r24, 0x60	; 96
+ 110:	90 e0       	ldi	r25, 0x00	; 0
+ 112:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <rsPrint>
+	rsPrint(polecenie.arg);
+ 116:	83 e4       	ldi	r24, 0x43	; 67
+ 118:	91 e0       	ldi	r25, 0x01	; 1
+ 11a:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <rsPrint>
+	PrintNewLine();
+ 11e:	0e 94 73 01 	call	0x2e6	; 0x2e6 <PrintNewLine>
+	ClearRX_buf();
+ 122:	0e 94 4d 00 	call	0x9a	; 0x9a <ClearRX_buf>
+ 126:	08 95       	ret
+
+00000128 <main>:
+
+
+
+int main(void)
+{
+	RecievCharCount =0;
+ 128:	10 92 35 01 	sts	0x0135, r1	; 0x800135 <RecievCharCount>
+CPU_init(); 
+ 12c:	0e 94 49 00 	call	0x92	; 0x92 <CPU_init>
+init_dev_onPCB();
+ 130:	0e 94 4c 00 	call	0x98	; 0x98 <init_dev_onPCB>
+//Diagnostics();
+
+sei();
+ 134:	78 94       	sei
+ 136:	ff cf       	rjmp	.-2      	; 0x136 <main+0xe>
+
+00000138 <__vector_11>:
+
+flag_val =CLR;
+flag_arg =CLR;
+*/
+ISR(USART_RXC_vect)								//Przerwanie od przychodzacej komendy wyw. gdy dana w UDR
+{
+ 138:	1f 92       	push	r1
+ 13a:	0f 92       	push	r0
+ 13c:	0f b6       	in	r0, 0x3f	; 63
+ 13e:	0f 92       	push	r0
+ 140:	11 24       	eor	r1, r1
+ 142:	2f 93       	push	r18
+ 144:	3f 93       	push	r19
+ 146:	4f 93       	push	r20
+ 148:	5f 93       	push	r21
+ 14a:	6f 93       	push	r22
+ 14c:	7f 93       	push	r23
+ 14e:	8f 93       	push	r24
+ 150:	9f 93       	push	r25
+ 152:	af 93       	push	r26
+ 154:	bf 93       	push	r27
+ 156:	ef 93       	push	r30
+ 158:	ff 93       	push	r31
+
+
+	RX_buf[RecievCharCount]= UDR;
+ 15a:	8c b1       	in	r24, 0x0c	; 12
+ 15c:	e0 91 35 01 	lds	r30, 0x0135	; 0x800135 <RecievCharCount>
+ 160:	f0 e0       	ldi	r31, 0x00	; 0
+ 162:	e9 5b       	subi	r30, 0xB9	; 185
+ 164:	fd 4f       	sbci	r31, 0xFD	; 253
+ 166:	80 83       	st	Z, r24
+	
+	
+	
+	if(RX_buf[RecievCharCount] == '<')
+ 168:	8c 33       	cpi	r24, 0x3C	; 60
+ 16a:	11 f4       	brne	.+4      	; 0x170 <__vector_11+0x38>
+	{
+		ClearRX_buf();
+ 16c:	0e 94 4d 00 	call	0x9a	; 0x9a <ClearRX_buf>
+	}
+	
+	
+	if(RecievCharCount ==0)
+ 170:	80 91 35 01 	lds	r24, 0x0135	; 0x800135 <RecievCharCount>
+ 174:	81 11       	cpse	r24, r1
+ 176:	0d c0       	rjmp	.+26     	; 0x192 <__vector_11+0x5a>
+	{
+		if(RX_buf[0] != mark_arg)		//sprawdzanie poprawnosci odebrania pierwszego znaku
+ 178:	80 91 47 02 	lds	r24, 0x0247	; 0x800247 <RX_buf>
+ 17c:	83 32       	cpi	r24, 0x23	; 35
+ 17e:	09 f4       	brne	.+2      	; 0x182 <__vector_11+0x4a>
+ 180:	81 c0       	rjmp	.+258    	; 0x284 <__vector_11+0x14c>
+		{
+			rsPrint("Niepoprawny znak poczatku polecenia");
+ 182:	84 e9       	ldi	r24, 0x94	; 148
+ 184:	90 e0       	ldi	r25, 0x00	; 0
+ 186:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <rsPrint>
+			PrintNewLine();
+ 18a:	0e 94 73 01 	call	0x2e6	; 0x2e6 <PrintNewLine>
+			ClearRX_buf();
+ 18e:	0e 94 4d 00 	call	0x9a	; 0x9a <ClearRX_buf>
+		}
+	}
+	
+	if((3 <=RecievCharCount)&&(RecievCharCount<=15))
+ 192:	80 91 35 01 	lds	r24, 0x0135	; 0x800135 <RecievCharCount>
+ 196:	9d ef       	ldi	r25, 0xFD	; 253
+ 198:	98 0f       	add	r25, r24
+ 19a:	9d 30       	cpi	r25, 0x0D	; 13
+ 19c:	08 f0       	brcs	.+2      	; 0x1a0 <__vector_11+0x68>
+ 19e:	5d c0       	rjmp	.+186    	; 0x25a <__vector_11+0x122>
+	{
+		
+		if((3 <=RecievCharCount)&&(RecievCharCount<=8))
+ 1a0:	96 30       	cpi	r25, 0x06	; 6
+ 1a2:	08 f0       	brcs	.+2      	; 0x1a6 <__vector_11+0x6e>
+ 1a4:	3f c0       	rjmp	.+126    	; 0x224 <__vector_11+0xec>
+		{
+			if((RX_buf[RecievCharCount-1] == mark_swich)&&(RX_buf[RecievCharCount] == mark_end))
+ 1a6:	28 2f       	mov	r18, r24
+ 1a8:	30 e0       	ldi	r19, 0x00	; 0
+ 1aa:	f9 01       	movw	r30, r18
+ 1ac:	ea 5b       	subi	r30, 0xBA	; 186
+ 1ae:	fd 4f       	sbci	r31, 0xFD	; 253
+ 1b0:	90 81       	ld	r25, Z
+ 1b2:	9f 32       	cpi	r25, 0x2F	; 47
+ 1b4:	19 f5       	brne	.+70     	; 0x1fc <__vector_11+0xc4>
+ 1b6:	f9 01       	movw	r30, r18
+ 1b8:	e9 5b       	subi	r30, 0xB9	; 185
+ 1ba:	fd 4f       	sbci	r31, 0xFD	; 253
+ 1bc:	90 81       	ld	r25, Z
+ 1be:	9b 33       	cpi	r25, 0x3B	; 59
+ 1c0:	71 f4       	brne	.+28     	; 0x1de <__vector_11+0xa6>
+			{
+				rsPrint("Obebrano polecenie specjalne/odczyt");
+ 1c2:	88 eb       	ldi	r24, 0xB8	; 184
+ 1c4:	90 e0       	ldi	r25, 0x00	; 0
+ 1c6:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <rsPrint>
+				PrintNewLine();
+ 1ca:	0e 94 73 01 	call	0x2e6	; 0x2e6 <PrintNewLine>
+			
+				flag_val =CLR;
+ 1ce:	10 92 34 01 	sts	0x0134, r1	; 0x800134 <__data_end>
+				flag_arg =SET;
+ 1d2:	81 e0       	ldi	r24, 0x01	; 1
+ 1d4:	80 93 3e 01 	sts	0x013E, r24	; 0x80013e <flag_arg>
+				UART_Get_command();
+ 1d8:	0e 94 67 00 	call	0xce	; 0xce <UART_Get_command>
+ 1dc:	23 c0       	rjmp	.+70     	; 0x224 <__vector_11+0xec>
+			}
+			else if((RX_buf[RecievCharCount-1] == mark_swich)&&(RX_buf[RecievCharCount] == mark_val))
+ 1de:	9a 32       	cpi	r25, 0x2A	; 42
+ 1e0:	09 f0       	breq	.+2      	; 0x1e4 <__vector_11+0xac>
+ 1e2:	4d c0       	rjmp	.+154    	; 0x27e <__vector_11+0x146>
+			{
+				rsPrint("polecenie set");
+ 1e4:	8c ed       	ldi	r24, 0xDC	; 220
+ 1e6:	90 e0       	ldi	r25, 0x00	; 0
+ 1e8:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <rsPrint>
+				PrintNewLine();
+ 1ec:	0e 94 73 01 	call	0x2e6	; 0x2e6 <PrintNewLine>
+				flag_val =SET;
+ 1f0:	81 e0       	ldi	r24, 0x01	; 1
+ 1f2:	80 93 34 01 	sts	0x0134, r24	; 0x800134 <__data_end>
+				flag_arg =SET;
+ 1f6:	80 93 3e 01 	sts	0x013E, r24	; 0x80013e <flag_arg>
+ 1fa:	14 c0       	rjmp	.+40     	; 0x224 <__vector_11+0xec>
+				
+			}
+			else if(	(RecievCharCount ==8)	 && 	((RX_buf[7] !=mark_swich) &&	((RX_buf[8] !=mark_end)	&&	(RX_buf[8] !=mark_val)))	)
+ 1fc:	88 30       	cpi	r24, 0x08	; 8
+ 1fe:	69 f5       	brne	.+90     	; 0x25a <__vector_11+0x122>
+ 200:	90 91 4e 02 	lds	r25, 0x024E	; 0x80024e <RX_buf+0x7>
+ 204:	9f 32       	cpi	r25, 0x2F	; 47
+ 206:	c1 f0       	breq	.+48     	; 0x238 <__vector_11+0x100>
+ 208:	80 91 4f 02 	lds	r24, 0x024F	; 0x80024f <RX_buf+0x8>
+ 20c:	8b 33       	cpi	r24, 0x3B	; 59
+ 20e:	29 f1       	breq	.+74     	; 0x25a <__vector_11+0x122>
+ 210:	8a 32       	cpi	r24, 0x2A	; 42
+ 212:	19 f1       	breq	.+70     	; 0x25a <__vector_11+0x122>
+			{
+				rsPrint("zla skladnia");
+ 214:	8a ee       	ldi	r24, 0xEA	; 234
+ 216:	90 e0       	ldi	r25, 0x00	; 0
+ 218:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <rsPrint>
+				PrintNewLine();
+ 21c:	0e 94 73 01 	call	0x2e6	; 0x2e6 <PrintNewLine>
+				ClearRX_buf();
+ 220:	0e 94 4d 00 	call	0x9a	; 0x9a <ClearRX_buf>
+			} 
+		}
+	
+	
+			if(	((RX_buf[RecievCharCount-1] == mark_swich)&&(RX_buf[RecievCharCount] == mark_end))	&& (( RecievCharCount < 15) && (8 < RecievCharCount))	)
+ 224:	80 91 35 01 	lds	r24, 0x0135	; 0x800135 <RecievCharCount>
+ 228:	28 2f       	mov	r18, r24
+ 22a:	30 e0       	ldi	r19, 0x00	; 0
+ 22c:	f9 01       	movw	r30, r18
+ 22e:	ea 5b       	subi	r30, 0xBA	; 186
+ 230:	fd 4f       	sbci	r31, 0xFD	; 253
+ 232:	90 81       	ld	r25, Z
+ 234:	9f 32       	cpi	r25, 0x2F	; 47
+ 236:	89 f4       	brne	.+34     	; 0x25a <__vector_11+0x122>
+ 238:	f9 01       	movw	r30, r18
+ 23a:	e9 5b       	subi	r30, 0xB9	; 185
+ 23c:	fd 4f       	sbci	r31, 0xFD	; 253
+ 23e:	90 81       	ld	r25, Z
+ 240:	9b 33       	cpi	r25, 0x3B	; 59
+ 242:	59 f4       	brne	.+22     	; 0x25a <__vector_11+0x122>
+ 244:	89 50       	subi	r24, 0x09	; 9
+ 246:	86 30       	cpi	r24, 0x06	; 6
+ 248:	40 f4       	brcc	.+16     	; 0x25a <__vector_11+0x122>
+				{
+					rsPrint("polecenie set odebrane poprawnie");
+ 24a:	87 ef       	ldi	r24, 0xF7	; 247
+ 24c:	90 e0       	ldi	r25, 0x00	; 0
+ 24e:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <rsPrint>
+					PrintNewLine();
+ 252:	0e 94 73 01 	call	0x2e6	; 0x2e6 <PrintNewLine>
+					UART_Get_command();
+ 256:	0e 94 67 00 	call	0xce	; 0xce <UART_Get_command>
+				}
+		
+		}
+	
+	 RecievCharCount++;
+ 25a:	80 91 35 01 	lds	r24, 0x0135	; 0x800135 <RecievCharCount>
+ 25e:	8f 5f       	subi	r24, 0xFF	; 255
+ 260:	80 93 35 01 	sts	0x0135, r24	; 0x800135 <RecievCharCount>
+	 
+	if(15 < RecievCharCount)
+ 264:	80 31       	cpi	r24, 0x10	; 16
+ 266:	98 f0       	brcs	.+38     	; 0x28e <__vector_11+0x156>
+	{
+		rsPrint("Blad dlugosci polecenia");
+ 268:	88 e1       	ldi	r24, 0x18	; 24
+ 26a:	91 e0       	ldi	r25, 0x01	; 1
+ 26c:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <rsPrint>
+		PrintNewLine();
+ 270:	0e 94 73 01 	call	0x2e6	; 0x2e6 <PrintNewLine>
+		RecievCharCount=0;
+ 274:	10 92 35 01 	sts	0x0135, r1	; 0x800135 <RecievCharCount>
+		ClearRX_buf();
+ 278:	0e 94 4d 00 	call	0x9a	; 0x9a <ClearRX_buf>
+	}
+	
+	
+	}
+ 27c:	08 c0       	rjmp	.+16     	; 0x28e <__vector_11+0x156>
+				PrintNewLine();
+				flag_val =SET;
+				flag_arg =SET;
+				
+			}
+			else if(	(RecievCharCount ==8)	 && 	((RX_buf[7] !=mark_swich) &&	((RX_buf[8] !=mark_end)	&&	(RX_buf[8] !=mark_val)))	)
+ 27e:	88 30       	cpi	r24, 0x08	; 8
+ 280:	61 f7       	brne	.-40     	; 0x25a <__vector_11+0x122>
+ 282:	be cf       	rjmp	.-132    	; 0x200 <__vector_11+0xc8>
+					UART_Get_command();
+				}
+		
+		}
+	
+	 RecievCharCount++;
+ 284:	80 91 35 01 	lds	r24, 0x0135	; 0x800135 <RecievCharCount>
+ 288:	8f 5f       	subi	r24, 0xFF	; 255
+ 28a:	80 93 35 01 	sts	0x0135, r24	; 0x800135 <RecievCharCount>
+		RecievCharCount=0;
+		ClearRX_buf();
+	}
+	
+	
+	}
+ 28e:	ff 91       	pop	r31
+ 290:	ef 91       	pop	r30
+ 292:	bf 91       	pop	r27
+ 294:	af 91       	pop	r26
+ 296:	9f 91       	pop	r25
+ 298:	8f 91       	pop	r24
+ 29a:	7f 91       	pop	r23
+ 29c:	6f 91       	pop	r22
+ 29e:	5f 91       	pop	r21
+ 2a0:	4f 91       	pop	r20
+ 2a2:	3f 91       	pop	r19
+ 2a4:	2f 91       	pop	r18
+ 2a6:	0f 90       	pop	r0
+ 2a8:	0f be       	out	0x3f, r0	; 63
+ 2aa:	0f 90       	pop	r0
+ 2ac:	1f 90       	pop	r1
+ 2ae:	18 95       	reti
+
+000002b0 <rsSndByte>:
+	
+	PrintNewLine();
+}
+*/
+void PrintAllReg(void)
+	{
+ 2b0:	5d 9b       	sbis	0x0b, 5	; 11
+ 2b2:	fe cf       	rjmp	.-4      	; 0x2b0 <rsSndByte>
+ 2b4:	8c b9       	out	0x0c, r24	; 12
+ 2b6:	08 95       	ret
+
+000002b8 <rsPrint>:
+ 2b8:	cf 93       	push	r28
+ 2ba:	df 93       	push	r29
+ 2bc:	ec 01       	movw	r28, r24
+ 2be:	88 81       	ld	r24, Y
+ 2c0:	88 23       	and	r24, r24
+ 2c2:	31 f0       	breq	.+12     	; 0x2d0 <rsPrint+0x18>
+ 2c4:	21 96       	adiw	r28, 0x01	; 1
+ 2c6:	0e 94 58 01 	call	0x2b0	; 0x2b0 <rsSndByte>
+ 2ca:	89 91       	ld	r24, Y+
+ 2cc:	81 11       	cpse	r24, r1
+ 2ce:	fb cf       	rjmp	.-10     	; 0x2c6 <rsPrint+0xe>
+ 2d0:	df 91       	pop	r29
+ 2d2:	cf 91       	pop	r28
+ 2d4:	08 95       	ret
+
+000002d6 <init_UART>:
+ 2d6:	10 bc       	out	0x20, r1	; 32
+ 2d8:	87 e1       	ldi	r24, 0x17	; 23
+ 2da:	89 b9       	out	0x09, r24	; 9
+ 2dc:	88 e9       	ldi	r24, 0x98	; 152
+ 2de:	8a b9       	out	0x0a, r24	; 10
+ 2e0:	86 e8       	ldi	r24, 0x86	; 134
+ 2e2:	80 bd       	out	0x20, r24	; 32
+ 2e4:	08 95       	ret
+
+000002e6 <PrintNewLine>:
+		
+	}		
+	
+void	PrintNewLine(void)
+{
+	rsPrint("\n\r");
+ 2e6:	80 e3       	ldi	r24, 0x30	; 48
+ 2e8:	91 e0       	ldi	r25, 0x01	; 1
+ 2ea:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <rsPrint>
+ 2ee:	08 95       	ret
+
+000002f0 <_exit>:
+ 2f0:	f8 94       	cli
+
+000002f2 <__stop_program>:
+ 2f2:	ff cf       	rjmp	.-2      	; 0x2f2 <__stop_program>
