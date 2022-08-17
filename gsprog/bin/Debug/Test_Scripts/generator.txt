@@ -1,0 +1,5 @@
+<command><set><device=generator><param=enable><arg=true></command>
+<command><set><device=generator><param=signal><arg=sin></command>
+<command><set><device=generator><param=freq><value=1000></command>
+<command><set><device=generator><param=volt><value=10></command>
+<command><set><device=generator><param=enable><arg=false></command>
