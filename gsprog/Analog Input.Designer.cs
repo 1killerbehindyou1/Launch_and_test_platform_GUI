@@ -1,6 +1,6 @@
 ﻿namespace gsprog
 {
-    partial class Form2
+    partial class Analog_Input
     {
         /// <summary>
         /// Required designer variable.
@@ -26,76 +26,70 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        public void InitializeComponent()
+        private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.LineAnnotation lineAnnotation1 = new System.Windows.Forms.DataVisualization.Charting.LineAnnotation();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.CustomLabel customLabel1 = new System.Windows.Forms.DataVisualization.Charting.CustomLabel();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            this.plotter_option_group = new System.Windows.Forms.GroupBox();
-            this.clear_graph = new System.Windows.Forms.Button();
+            this.Input1_graph = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.graph_min = new System.Windows.Forms.NumericUpDown();
             this.Savefilebutton2 = new System.Windows.Forms.Button();
             this.OpenFile2 = new System.Windows.Forms.Button();
-            this.LogujBox = new System.Windows.Forms.CheckBox();
             this.run_box = new System.Windows.Forms.CheckBox();
             this.label26 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.graph_max = new System.Windows.Forms.NumericUpDown();
             this.graph_scale = new System.Windows.Forms.NumericUpDown();
             this.label24 = new System.Windows.Forms.Label();
-            this.graph_speed = new System.Windows.Forms.NumericUpDown();
             this.label25 = new System.Windows.Forms.Label();
-            this.graph = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.plotter_option_group.SuspendLayout();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Input1_graph.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graph_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.graph_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.graph_scale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.graph_speed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.graph)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
-            // plotter_option_group
+            // Input1_graph
             // 
-            this.plotter_option_group.Controls.Add(this.clear_graph);
-            this.plotter_option_group.Controls.Add(this.label27);
-            this.plotter_option_group.Controls.Add(this.graph_min);
-            this.plotter_option_group.Controls.Add(this.Savefilebutton2);
-            this.plotter_option_group.Controls.Add(this.OpenFile2);
-            this.plotter_option_group.Controls.Add(this.LogujBox);
-            this.plotter_option_group.Controls.Add(this.run_box);
-            this.plotter_option_group.Controls.Add(this.label26);
-            this.plotter_option_group.Controls.Add(this.numericUpDown1);
-            this.plotter_option_group.Controls.Add(this.graph_max);
-            this.plotter_option_group.Controls.Add(this.graph_scale);
-            this.plotter_option_group.Controls.Add(this.label24);
-            this.plotter_option_group.Controls.Add(this.graph_speed);
-            this.plotter_option_group.Controls.Add(this.label25);
-            this.plotter_option_group.Location = new System.Drawing.Point(41, 370);
-            this.plotter_option_group.Name = "plotter_option_group";
-            this.plotter_option_group.Size = new System.Drawing.Size(527, 69);
-            this.plotter_option_group.TabIndex = 29;
-            this.plotter_option_group.TabStop = false;
-            this.plotter_option_group.Text = "Plotter options";
+            this.Input1_graph.Controls.Add(this.button1);
+            this.Input1_graph.Controls.Add(this.label27);
+            this.Input1_graph.Controls.Add(this.graph_min);
+            this.Input1_graph.Controls.Add(this.Savefilebutton2);
+            this.Input1_graph.Controls.Add(this.OpenFile2);
+            this.Input1_graph.Controls.Add(this.run_box);
+            this.Input1_graph.Controls.Add(this.label26);
+            this.Input1_graph.Controls.Add(this.numericUpDown1);
+            this.Input1_graph.Controls.Add(this.graph_max);
+            this.Input1_graph.Controls.Add(this.graph_scale);
+            this.Input1_graph.Controls.Add(this.label24);
+            this.Input1_graph.Controls.Add(this.label25);
+            this.Input1_graph.Location = new System.Drawing.Point(4, 369);
+            this.Input1_graph.Name = "Input1_graph";
+            this.Input1_graph.Size = new System.Drawing.Size(585, 69);
+            this.Input1_graph.TabIndex = 30;
+            this.Input1_graph.TabStop = false;
+            this.Input1_graph.Text = "Plotter options";
             // 
-            // clear_graph
+            // button1
             // 
-            this.clear_graph.Location = new System.Drawing.Point(407, 15);
-            this.clear_graph.Name = "clear_graph";
-            this.clear_graph.Size = new System.Drawing.Size(100, 23);
-            this.clear_graph.TabIndex = 28;
-            this.clear_graph.Text = "Czyść wykres";
-            this.clear_graph.UseVisualStyleBackColor = true;
-            this.clear_graph.UseWaitCursor = true;
+            this.button1.Location = new System.Drawing.Point(423, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 23);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Zapisz wykres";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(68, 24);
+            this.label27.Location = new System.Drawing.Point(110, 23);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(37, 16);
             this.label27.TabIndex = 35;
@@ -108,7 +102,7 @@
             this.graph_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.graph_min.Enabled = false;
             this.graph_min.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.graph_min.Location = new System.Drawing.Point(71, 43);
+            this.graph_min.Location = new System.Drawing.Point(113, 42);
             this.graph_min.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -126,38 +120,28 @@
             // 
             // Savefilebutton2
             // 
-            this.Savefilebutton2.Location = new System.Drawing.Point(326, 15);
+            this.Savefilebutton2.Location = new System.Drawing.Point(504, 42);
             this.Savefilebutton2.Name = "Savefilebutton2";
             this.Savefilebutton2.Size = new System.Drawing.Size(75, 23);
             this.Savefilebutton2.TabIndex = 33;
-            this.Savefilebutton2.Text = "Screen";
+            this.Savefilebutton2.Text = "Zapisz";
             this.Savefilebutton2.UseVisualStyleBackColor = true;
             // 
             // OpenFile2
             // 
-            this.OpenFile2.Location = new System.Drawing.Point(326, 40);
+            this.OpenFile2.Location = new System.Drawing.Point(423, 42);
             this.OpenFile2.Name = "OpenFile2";
             this.OpenFile2.Size = new System.Drawing.Size(75, 23);
             this.OpenFile2.TabIndex = 32;
             this.OpenFile2.Text = "Otwórz";
             this.OpenFile2.UseVisualStyleBackColor = true;
             // 
-            // LogujBox
-            // 
-            this.LogujBox.AutoSize = true;
-            this.LogujBox.Location = new System.Drawing.Point(250, 19);
-            this.LogujBox.Name = "LogujBox";
-            this.LogujBox.Size = new System.Drawing.Size(52, 17);
-            this.LogujBox.TabIndex = 31;
-            this.LogujBox.Text = "Loguj";
-            this.LogujBox.UseVisualStyleBackColor = true;
-            // 
             // run_box
             // 
             this.run_box.AutoSize = true;
             this.run_box.Checked = true;
             this.run_box.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.run_box.Location = new System.Drawing.Point(250, 46);
+            this.run_box.Location = new System.Drawing.Point(369, 46);
             this.run_box.Name = "run_box";
             this.run_box.Size = new System.Drawing.Size(46, 17);
             this.run_box.TabIndex = 28;
@@ -168,7 +152,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(124, 24);
+            this.label26.Location = new System.Drawing.Point(211, 24);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(47, 16);
             this.label26.TabIndex = 30;
@@ -180,7 +164,7 @@
             this.numericUpDown1.AutoSize = true;
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.numericUpDown1.Location = new System.Drawing.Point(177, 43);
+            this.numericUpDown1.Location = new System.Drawing.Point(286, 42);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -239,7 +223,7 @@
             0,
             0,
             0});
-            this.graph_scale.Location = new System.Drawing.Point(127, 43);
+            this.graph_scale.Location = new System.Drawing.Point(214, 42);
             this.graph_scale.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -270,134 +254,97 @@
             this.label24.TabIndex = 24;
             this.label24.Text = "Vmax";
             // 
-            // graph_speed
-            // 
-            this.graph_speed.AllowDrop = true;
-            this.graph_speed.AutoSize = true;
-            this.graph_speed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.graph_speed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.graph_speed.Location = new System.Drawing.Point(422, 43);
-            this.graph_speed.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.graph_speed.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.graph_speed.Name = "graph_speed";
-            this.graph_speed.Size = new System.Drawing.Size(53, 20);
-            this.graph_speed.TabIndex = 17;
-            this.graph_speed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.graph_speed.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(174, 24);
+            this.label25.Location = new System.Drawing.Point(283, 24);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(56, 16);
             this.label25.TabIndex = 18;
             this.label25.Text = "Interval:";
             // 
-            // graph
+            // chart1
             // 
-            lineAnnotation1.Name = "U_wyj";
-            this.graph.Annotations.Add(lineAnnotation1);
-            this.graph.BorderlineColor = System.Drawing.Color.Black;
-            this.graph.BorderlineWidth = 0;
-            chartArea1.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
-            chartArea1.AxisX.IsMarginVisible = false;
-            chartArea1.AxisX.LabelStyle.Enabled = false;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            chartArea1.AxisX.MajorGrid.Interval = 0D;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
-            chartArea1.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea1.AxisX.MajorTickMark.TickMarkStyle = System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.InsideArea;
-            chartArea1.AxisX.MinorGrid.Enabled = true;
-            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            chartArea1.AxisX.MinorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
-            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            customLabel1.Text = "Volt";
+            chartArea1.AxisX.CustomLabels.Add(customLabel1);
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.Maximum = 20D;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorGrid.IntervalOffset = 0D;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorGrid.LineWidth = 2;
             chartArea1.AxisY.Maximum = 20D;
             chartArea1.AxisY.MinorGrid.Enabled = true;
-            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.White;
             chartArea1.AxisY.MinorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            chartArea1.BorderColor = System.Drawing.Color.Maroon;
-            chartArea1.BorderWidth = 0;
+            chartArea1.AxisY.Title = "Volt";
+            chartArea1.BackColor = System.Drawing.Color.Black;
+            chartArea1.BackImageTransparentColor = System.Drawing.Color.Black;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea1.BorderColor = System.Drawing.Color.White;
             chartArea1.Name = "ChartArea1";
-            this.graph.ChartAreas.Add(chartArea1);
-            legend1.Alignment = System.Drawing.StringAlignment.Center;
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
-            legend1.MaximumAutoSize = 20F;
+            chartArea1.ShadowColor = System.Drawing.Color.White;
+            this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            legend1.TitleAlignment = System.Drawing.StringAlignment.Near;
-            legend1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.graph.Legends.Add(legend1);
-            this.graph.Location = new System.Drawing.Point(47, 12);
-            this.graph.Name = "graph";
-            series1.BorderWidth = 2;
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(4, 24);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(123)))), ((int)(((byte)(182)))));
             series1.Legend = "Legend1";
-            series1.Name = "var 1";
-            series1.YValuesPerPoint = 32;
-            this.graph.Series.Add(series1);
-            this.graph.Size = new System.Drawing.Size(510, 352);
-            this.graph.TabIndex = 28;
-            this.graph.Text = "chart2";
-            title1.Name = "Kanał 3";
-            this.graph.Titles.Add(title1);
+            series1.MarkerBorderColor = System.Drawing.Color.Black;
+            series1.MarkerColor = System.Drawing.Color.Black;
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(678, 300);
+            this.chart1.TabIndex = 31;
+            this.chart1.Text = "chart1";
             // 
-            // Form2
+            // Analog_Input
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 450);
-            this.Controls.Add(this.plotter_option_group);
-            this.Controls.Add(this.graph);
-            this.Name = "Form2";
-            this.Text = "Form2";
-            this.plotter_option_group.ResumeLayout(false);
-            this.plotter_option_group.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(593, 450);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.Input1_graph);
+            this.Location = new System.Drawing.Point(800, 0);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Analog_Input";
+            this.Text = "Analog_Input";
+            this.Input1_graph.ResumeLayout(false);
+            this.Input1_graph.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graph_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.graph_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.graph_scale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.graph_speed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.graph)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox plotter_option_group;
-        private System.Windows.Forms.Button clear_graph;
+        private System.Windows.Forms.GroupBox Input1_graph;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.NumericUpDown graph_min;
         private System.Windows.Forms.Button Savefilebutton2;
         private System.Windows.Forms.Button OpenFile2;
-        public System.Windows.Forms.CheckBox LogujBox;
         public System.Windows.Forms.CheckBox run_box;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown graph_max;
         private System.Windows.Forms.NumericUpDown graph_scale;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.NumericUpDown graph_speed;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.DataVisualization.Charting.Chart graph;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
