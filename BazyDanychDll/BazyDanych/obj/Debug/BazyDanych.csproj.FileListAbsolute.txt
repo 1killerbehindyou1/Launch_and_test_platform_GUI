@@ -1,0 +1,10 @@
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\BazyDanychDll\BazyDanych\bin\Debug\BazyDanych.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\BazyDanychDll\BazyDanych\bin\Debug\BazyDanych.pdb
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\BazyDanychDll\BazyDanych\obj\Debug\BazyDanych.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\BazyDanychDll\BazyDanych\obj\Debug\BazyDanych.pdb
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\BazyDanychDll\BazyDanych\bin\Debug\MySql.Data.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\BazyDanychDll\BazyDanych\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\BazyDanychDll\BazyDanych\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\BazyDanychDll\BazyDanych\bin\Debug\Renci.SshNet.dll
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\BazyDanychDll\BazyDanych\obj\Debug\BazyDanych.csproj.CopyComplete
+C:\Users\plesn\OneDrive\Desktop\0. Projekty\0. Projekt Platforma testowa\Software\2. Visual studio source\1. aplikacja  na PC w C#\BazyDanychDll\BazyDanych\obj\Debug\BazyDanych.csprojAssemblyReference.cache
